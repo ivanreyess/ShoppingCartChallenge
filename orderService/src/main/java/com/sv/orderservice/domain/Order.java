@@ -1,6 +1,7 @@
 package com.sv.orderservice.domain;
 
 
+import com.sv.orderservice.dto.OrderDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
@@ -47,6 +48,37 @@ public class Order {
     @LastModifiedDate
     private long modifiedDate;
 
+    public static OrderDTO toDto(Order order) {
+        return OrderDTO.builder()
+                .id(order.getId())
+                .name(order.getName())
+                .lastName(order.getLastName())
+                .total(order.getTotal())
+                .discount(order.getDiscount())
+                .city(order.getCountry())
+                .country(order.getCountry())
+                .email(order.getEmail())
+                .shippingAddress(order.getShippingAddress())
+                .createdDate(order.getCreatedDate())
+                .modifiedDate(order.getModifiedDate())
+                .build();
+    }
+
+    public static Order toEntity(OrderDTO orderDTO){
+        return Order.builder()
+                .id(orderDTO.id())
+                .name(orderDTO.name())
+                .lastName(orderDTO.lastName())
+                .total(orderDTO.total())
+                .discount(orderDTO.discount())
+                .city(orderDTO.city())
+                .country(orderDTO.country())
+                .email(orderDTO.email())
+                .shippingAddress(orderDTO.shippingAddress())
+                .createdDate(orderDTO.createdDate())
+                .modifiedDate(orderDTO.modifiedDate())
+                .build();
+    }
 
 
 }
