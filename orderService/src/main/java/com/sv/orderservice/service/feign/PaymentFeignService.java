@@ -1,8 +1,10 @@
-package com.sv.orderservice.service;
+package com.sv.orderservice.service.feign;
 
 import com.sv.orderservice.client.PaymentClientRest;
 import com.sv.orderservice.domain.dto.OrderDTO;
 import com.sv.orderservice.domain.dto.PaymentDTO;
+import com.sv.orderservice.service.OrderService;
+import com.sv.orderservice.service.PaymentService;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

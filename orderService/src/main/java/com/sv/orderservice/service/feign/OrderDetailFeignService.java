@@ -1,14 +1,15 @@
-package com.sv.orderservice.service;
+package com.sv.orderservice.service.feign;
 
 import com.google.common.util.concurrent.AtomicDouble;
 import com.sv.orderservice.client.OrderDetailClientRest;
 import com.sv.orderservice.domain.dto.OrderDetailDTO;
+import com.sv.orderservice.service.OrderDetailService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class OrderDetailFeignService implements OrderDetailService{
+public class OrderDetailFeignService implements OrderDetailService {
 
     private final OrderDetailClientRest orderDetailClientRest;
 
