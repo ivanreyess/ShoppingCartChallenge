@@ -1,6 +1,6 @@
 package com.sv.orderservice.controller;
 
-import com.sv.orderservice.dto.PaymentDTO;
+import com.sv.orderservice.domain.dto.PaymentDTO;
 import com.sv.orderservice.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

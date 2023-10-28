@@ -1,6 +1,6 @@
 package com.sv.orderservice.client;
 
-import com.sv.orderservice.dto.OrderDetailDTO;
+import com.sv.orderservice.domain.dto.OrderDetailDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

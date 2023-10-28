@@ -1,7 +1,7 @@
 package com.sv.orderservice.domain;
 
 
-import com.sv.orderservice.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;

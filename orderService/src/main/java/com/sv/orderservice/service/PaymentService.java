@@ -1,7 +1,7 @@
 package com.sv.orderservice.service;
 
-import com.sv.orderservice.dto.OrderDTO;
-import com.sv.orderservice.dto.PaymentDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.PaymentDTO;
 
 public interface PaymentService {
 

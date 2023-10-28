@@ -1,7 +1,7 @@
 package com.sv.orderservice.service;
 
 import com.sv.orderservice.domain.Order;
-import com.sv.orderservice.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
 import com.sv.orderservice.repository.OrderRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

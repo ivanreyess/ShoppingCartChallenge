@@ -1,6 +1,6 @@
 package com.sv.orderservice.service;
 
-import com.sv.orderservice.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
 import org.springframework.data.domain.Page;
 
 import java.util.Optional;

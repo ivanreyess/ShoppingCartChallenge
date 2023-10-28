@@ -2,7 +2,7 @@ package com.sv.orderservice.service;
 
 import com.google.common.util.concurrent.AtomicDouble;
 import com.sv.orderservice.client.OrderDetailClientRest;
-import com.sv.orderservice.dto.OrderDetailDTO;
+import com.sv.orderservice.domain.dto.OrderDetailDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

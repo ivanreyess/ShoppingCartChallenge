@@ -1,8 +1,8 @@
 package com.sv.orderservice.service;
 
 import com.sv.orderservice.client.PaymentClientRest;
-import com.sv.orderservice.dto.OrderDTO;
-import com.sv.orderservice.dto.PaymentDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.PaymentDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

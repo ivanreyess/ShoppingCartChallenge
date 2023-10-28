@@ -1,6 +1,6 @@
 package com.sv.orderservice.controller;
 
-import com.sv.orderservice.dto.OrderDTO;
+import com.sv.orderservice.domain.dto.OrderDTO;
 import com.sv.orderservice.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
