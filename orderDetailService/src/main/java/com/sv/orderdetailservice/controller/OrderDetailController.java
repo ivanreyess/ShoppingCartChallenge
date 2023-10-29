@@ -1,6 +1,7 @@
 package com.sv.orderdetailservice.controller;
 
 import com.sv.orderdetailservice.domain.dto.OrderDetailDTO;
+import com.sv.orderdetailservice.domain.dto.OrderDetailsDTO;
 import com.sv.orderdetailservice.service.OrderDetailService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -45,6 +46,15 @@ public class OrderDetailController {
         return ResponseEntity
                 .created(new URI("/order-details/" + result.id()))
                 .body(result);
+    }
+
+    @PostMapping("/saveList")
+    public ResponseEntity<List<OrderDetailDTO>> createOrderDetails(@RequestBody OrderDetailsDTO orderDetailsDTO) throws URISyntaxException {
+        log.debug("REST request to save OrderDetail : {}", orderDetailsDTO);
+        List<OrderDetailDTO> orderDetailDTOS = orderDetailService.saveList(orderDetailsDTO);
+        return ResponseEntity
+                .ok()
+                .body(orderDetailDTOS);
     }
 
     /**

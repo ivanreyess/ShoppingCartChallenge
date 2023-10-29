@@ -1,8 +1,10 @@
 package com.sv.orderdetailservice.service;
 
 import com.sv.orderdetailservice.domain.dto.OrderDetailDTO;
+import com.sv.orderdetailservice.domain.dto.OrderDetailsDTO;
 import org.springframework.data.domain.Page;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface OrderDetailService {
@@ -14,6 +16,14 @@ public interface OrderDetailService {
      * @return the persisted entity.
      */
     OrderDetailDTO save(OrderDetailDTO orderDetailDTO);
+
+    /**
+     * Save a OrderDetail.
+     *
+     * @param orderDetailDTO the entity to save.
+     * @return the persisted entity.
+     */
+    List<OrderDetailDTO> saveList(OrderDetailsDTO orderDetailDTO);
 
     /**
      * Updates a OrderDetail.

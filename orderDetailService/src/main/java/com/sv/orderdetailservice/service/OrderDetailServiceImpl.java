@@ -2,6 +2,7 @@ package com.sv.orderdetailservice.service;
 
 import com.sv.orderdetailservice.domain.OrderDetail;
 import com.sv.orderdetailservice.domain.dto.OrderDetailDTO;
+import com.sv.orderdetailservice.domain.dto.OrderDetailsDTO;
 import com.sv.orderdetailservice.domain.dto.ProductDTO;
 import com.sv.orderdetailservice.repository.OrderDetailRepository;
 import com.sv.orderdetailservice.service.feign.ProductFeignService;
@@ -13,6 +14,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 import static com.sv.orderdetailservice.domain.OrderDetail.toDto;
@@ -45,6 +47,25 @@ public class OrderDetailServiceImpl implements OrderDetailService{
                 .build());
         return toDto(validatedOrderDetail.map(o -> orderDetailRepository.save(toEntity(o))).orElse(OrderDetail.builder().build()));
 
+    }
+
+    @Override
+    @Transactional
+    public List<OrderDetailDTO> saveList(OrderDetailsDTO orderDetailDTO) {
+        return orderDetailDTO.orderDetails().stream()
+                .map(this::getProductDetail)
+                .map(odDto -> toEntity(odDto.get()))
+                .map(orderDetailRepository::save).map(OrderDetail::toDto).toList();
+    }
+
+    Optional<OrderDetailDTO> getProductDetail(OrderDetailDTO orderDetailDTO) {
+        return productFeignService.getById(orderDetailDTO.productId()).map(pd -> OrderDetailDTO.builder()
+                .id(orderDetailDTO.id())
+                .orderId(orderDetailDTO.orderId())
+                .quantity(orderDetailDTO.quantity())
+                .productId(pd.id())
+                .price(pd.price())
+                .build());
     }
 
     @Override
