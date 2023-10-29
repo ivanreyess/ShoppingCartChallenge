@@ -1,0 +1,92 @@
+version: '3.7'
+services:
+  eureka-server:
+    build: ./eurekaServer
+    image: eureka-server:v1
+    ports:
+      - "8761:8761"
+    restart: always
+    networks:
+      - springcloud
+  user-service:
+    build: ./userService
+    image: user-service:v1
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  oauth-service:
+    build: ./oauthService
+    image: oauth-service:v1
+    ports:
+      - "9100:9100"
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  product-service:
+    build: ./productService
+    image: product-service:v1
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  order-detail-service:
+    build: ./orderDetailService
+    image: order-detail-service:v1
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  order-service:
+    build: ./orderService
+    image: order-service:v1
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  payment-service:
+    build: ./paymentService
+    image: payment-service:v1
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+  gateway-service:
+    build: ./gatewayService
+    image: gateway-service:v1
+    ports:
+      - "8090:8090"
+    restart: always
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-server:8761/eureka/
+    networks:
+      - springcloud
+    depends_on:
+      - eureka-server
+      - user-service
+      - oauth-service
+      - product-service
+      - order-detail-service
+      - order-service
+      - payment-service 
+networks:
+  springcloud:
