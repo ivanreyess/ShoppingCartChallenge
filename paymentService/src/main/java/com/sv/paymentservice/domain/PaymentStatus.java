@@ -1,4 +1,4 @@
-package com.example.paymentservice.domain;
+package com.sv.paymentservice.domain;
 
 /**
  * The PaymentStatus enumeration.

@@ -1,6 +1,6 @@
-package com.example.paymentservice.domain;
+package com.sv.paymentservice.domain;
 
-import com.sv.service.payment.dto.PaymentDTO;
+import com.sv.paymentservice.dto.PaymentDTO;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

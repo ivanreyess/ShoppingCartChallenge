@@ -1,6 +1,6 @@
-package com.example.paymentservice.dto;
+package com.sv.paymentservice.dto;
 
-import com.example.paymentservice.domain.PaymentStatus;
+import com.sv.paymentservice.domain.PaymentStatus;
 import lombok.Builder;
 
 @Builder
