@@ -1,3 +1,5 @@
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
 # Shopping cart Challenge
 
 Sample backend application for shopping cart based on *Spring boot* using microservice architecture.
@@ -30,7 +32,7 @@ Contains the gateway microservice and also provides security for the other micro
 Contains the oauth microservice for token generation and user authentication.
 
 
-#### order-detail-service :star:
+#### order-detail-service :athletic_shoe:
 Contains order-details-service that provides info on every product purchased.
 
 
@@ -42,7 +44,7 @@ Contains order microservice that deals with order CRUD operations.
 Contains the payment microservice for dealing with payments.
 
 
-#### product-service :star:
+#### product-service :shoe:
 Contains the product microservice that provides information and details about products.
 
 
