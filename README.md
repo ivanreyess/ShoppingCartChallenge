@@ -18,37 +18,47 @@ Sample backend application for shopping cart based on *Spring boot* using micros
 
 
 
-#### eureka-server :star:
+#### eureka-server :satellite:
 This directory contains the service discovery microservice.
 
-#### gateway-service :star:
+
+#### gateway-service :bridge_at_night:
 Contains the gateway microservice and also provides security for the other microservices.
 
-#### oauth-service :star:
+
+#### oauth-service :handbag:
 Contains the oauth microservice for token generation and user authentication.
+
 
 #### order-detail-service :star:
 Contains order-details-service that provides info on every product purchased.
 
-#### order-service :star:
+
+#### order-service :shopping:
 Contains order microservice that deals with order CRUD operations.
 
-#### payment-service :star:
+
+#### payment-service :credit_card:
 Contains the payment microservice for dealing with payments.
+
 
 #### product-service :star:
 Contains the product microservice that provides information and details about products.
 
-#### user-commons-service :star:
+
+#### user-commons-service :curly_haired_man:
 Contains user library that is used in different microservices.
 
-### build.sh :star:
+
+### build.sh :building_construction:
 script for building the projects and run them on containers.
 
-### docker-compose.yml :star:
+
+### docker-compose.yml :whale:
 docker-compose file to run all microservices.
 
-### Requirements :star:
+
+### Requirements :white_check_mark:
 
 * jdk 17
 * docker
