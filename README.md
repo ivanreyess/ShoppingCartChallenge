@@ -21,42 +21,40 @@ Sample backend application for shopping cart based on *Spring boot* using micros
 #### eureka-server :star:
 This directory contains the service discovery microservice.
 
-#### gateway :star:
+#### gateway-service :star:
 Contains the gateway microservice and also provides security for the other microservices.
 
-#### oauth-service
+#### oauth-service :star:
 Contains the oauth microservice for token generation and user authentication.
 
-#### order-detail-service
+#### order-detail-service :star:
 Contains order-details-service that provides info on every product purchased.
 
-#### order-service
+#### order-service :star:
 Contains order microservice that deals with order CRUD operations.
 
-#### payment-service
+#### payment-service :star:
 Contains the payment microservice for dealing with payments.
 
-#### product-service
+#### product-service :star:
 Contains the product microservice that provides information and details about products.
 
-#### user-commnons-service
+#### user-commons-service :star:
 Contains user library that is used in different microservices.
 
-
-### build.sh
+### build.sh :star:
 script for building the projects and run them on containers.
 
-
-### docker-compose.yml
+### docker-compose.yml :star:
 docker-compose file to run all microservices.
 
-### Requirements
+### Requirements :star:
 
 * jdk 17
 * docker
 * docker-compose
 
-### Running  the application
+### Running  the application :star:
 
 To run the application  you can manually build all the projects and run them individually or executing the scripts provided inside this project there is a build.sh file, do not forget to make them executable in order to run it.
 
@@ -78,7 +76,7 @@ To execute the desired script you can copy and paste on your terminal.
 ./stop.sh
 ```
 
-### Consuming APIs
+### Consuming APIs :star:
 
 * Main entry point is on http://localhost:8090/
 * All microservices are protected except for products on http://localhost:8090/api/products
